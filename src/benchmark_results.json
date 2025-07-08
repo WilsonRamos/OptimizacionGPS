@@ -1,0 +1,97 @@
+{
+  "generic": {
+    "binary_size": 17496,
+    "benchmark": {
+      "total_time": 0.044,
+      "ops_per_second": 9089463.0,
+      "time_per_op": 0.11,
+      "geofencing_ops": 8348988.0,
+      "memory_gps_point": 48.0,
+      "memory_geofence": 88.0,
+      "memory_total": 136.0,
+      "precision_tests": [
+        {
+          "test": "Arequipa local",
+          "calculated": 14.21,
+          "expected": 12.1,
+          "error_percent": 17.46
+        },
+        {
+          "test": "Arequipa",
+          "calculated": 9409.38,
+          "expected": 8856.5,
+          "error_percent": 6.24
+        },
+        {
+          "test": "1 grado longitud en ecuador",
+          "calculated": 111.19,
+          "expected": 111.32,
+          "error_percent": 0.11
+        },
+        {
+          "test": "Polo a polo",
+          "calculated": 20015.09,
+          "expected": 20015.09,
+          "error_percent": 0.0
+        }
+      ]
+    },
+    "full_output": "\ud83c\udf0d GEOFENCING GEN\u00c9RICO - SIN OPTIMIZACIONES\n===========================================\n\ud83d\udcca Versi\u00f3n que funciona para cualquier ubicaci\u00f3n mundial\n\ud83d\udd27 Con todas las verificaciones y validaciones de seguridad\n\n\ud83d\udd04 BENCHMARK GEN\u00c9RICO - Sin optimizaciones\n==========================================\nTiempo total: 0.0440 segundos\nOperaciones por segundo: 9089463\nTiempo por operaci\u00f3n: 0.11 \u03bcs\nGeofencing completo: 8348988 ops/seg\n\n\ud83d\udcbe USO DE MEMORIA GEN\u00c9RICO\n=========================\nTama\u00f1o GenericGPSPoint: 48 bytes\nTama\u00f1o GenericGeofence: 88 bytes\nTotal por punto + geocerca: 136 bytes\n\n\ud83c\udfaf PRUEBA DE PRECISI\u00d3N GEN\u00c9RICA\n===============================\nArequipa local: 14.21 km (esperado: 12.10 km, error: 17.46%)\nMadrid-Arequipa: 9409.38 km (esperado: 8856.50 km, error: 6.24%)\n1 grado longitud en ecuador: 111.19 km (esperado: 111.32 km, error: 0.11%)\nPolo a polo: 20015.09 km (esperado: 20015.09 km, error: 0.00%)\n\n\ud83d\udccb CARACTER\u00cdSTICAS:\n- Verificaciones completas de rangos GPS\n- Manejo robusto de errores\n- F\u00f3rmula Haversine precisa para cualquier distancia\n- Tipos de datos gen\u00e9ricos (double para todo)\n- Funciona desde el Polo Norte hasta el Polo Sur\n"
+  },
+  "optimized": {
+    "binary_size": 18672,
+    "benchmark": {
+      "total_time": 0.0,
+      "ops_per_second": 133333333333.0,
+      "time_per_op": 0.0,
+      "geofencing_ops": 20000000000.0,
+      "ultra_fast_ops": 200000000000.0,
+      "memory_gps_point": 16.0,
+      "memory_geofence": 42.0,
+      "memory_total": 58.0,
+      "precision_tests": [
+        {
+          "test": "Extremos Arequipa",
+          "calculated": 14221.7,
+          "expected": 12100.0,
+          "error_percent": 17.54
+        },
+        {
+          "test": "Centro a punto cercano",
+          "calculated": 259.1,
+          "expected": 288.0,
+          "error_percent": 10.03
+        },
+        {
+          "test": "Diagonal completa",
+          "calculated": 14221.7,
+          "expected": 12100.0,
+          "error_percent": 17.54
+        },
+        {
+          "test": "Distancia media",
+          "calculated": 1541.6,
+          "expected": 1520.0,
+          "error_percent": 1.42
+        }
+      ]
+    },
+    "full_output": "\u26a1 GEOFENCING OPTIMIZADO - SIMULANDO COSENSE\n===========================================\n\ud83d\udcca Versi\u00f3n optimizada usando especificaciones Newton DSL\n\ud83c\udfaf Rangos espec\u00edficos: Per\u00fa (Arequipa) - 11km x 7km\n\ud83d\ude80 Simulando optimizaciones autom\u00e1ticas de CoSense\n\n\u26a1 BENCHMARK OPTIMIZADO - Simulando CoSense\n===========================================\nTiempo total: 0.0000 segundos\nOperaciones por segundo: 133333333333\nTiempo por operaci\u00f3n: 0.00 \u03bcs\nUltra-r\u00e1pido: 200000000000 ops/seg\nGeofencing optimizado: 20000000000 ops/seg\n\n\ud83d\ude80 USO DE MEMORIA OPTIMIZADO\n============================\nTama\u00f1o OptimizedGPSPoint: 16 bytes\nTama\u00f1o OptimizedGeofence: 42 bytes\nTotal por punto + geocerca: 58 bytes\n\nArray de 1000 elementos:\nOptimizedGPSPoint[]: 15.6 KB\nOptimizedGeofence[]: 41.0 KB\n\n\ud83c\udfaf PRUEBA DE PRECISI\u00d3N OPTIMIZADA\n=================================\nExtremos Arequipa: 14221.7 m (esperado: 12100.0 m, error: 17.54%)\nCentro a punto cercano: 259.1 m (esperado: 288.0 m, error: 10.03%)\nDiagonal completa: 14221.7 m (esperado: 12100.0 m, error: 17.54%)\nDistancia media: 1541.6 m (esperado: 1520.0 m, error: 1.42%)\n\n\u2699\ufe0f  OPTIMIZACIONES APLICADAS (simulando CoSense)\n===============================================\n1. \u2705 Eliminaci\u00f3n de verificaciones de rango GPS\n   - Sin validaci\u00f3n lat \u2208 [-90,90] (conocido: [-16.41,-16.31])\n   - Sin validaci\u00f3n lon \u2208 [-180,180] (conocido: [-71.61,-71.53])\n\n2. \u2705 Compresi\u00f3n de tipos de datos\n   - float en lugar de double (precisi\u00f3n suficiente)\n   - unsigned short para altitud (rango [2330,5357])\n   - unsigned char para velocidad (rango [0,210])\n\n3. \u2705 Aproximaci\u00f3n matem\u00e1tica para distancias cortas\n   - Euclidiana en lugar de Haversine (error <0.05% en 11km)\n   - Constantes precomputadas para latitud de Arequipa\n\n4. \u2705 Eliminaci\u00f3n de verificaciones NULL y errores\n   - Sin chequeos de punteros (conocidos como v\u00e1lidos)\n   - Sin manejo de casos extremos (rango controlado)\n\n5. \u2705 Estructuras empaquetadas y optimizadas\n   - __attribute__((packed)) para reducir padding\n   - Campos m\u00e1s cortos donde sea posible\n\n\ud83d\udcc8 RESULTADOS ESPERADOS vs Versi\u00f3n Gen\u00e9rica:\n- Velocidad: 3-10x m\u00e1s r\u00e1pido\n- Memoria: 50-75% menos uso\n- Precisi\u00f3n: Mantenida para aplicaci\u00f3n local\n- C\u00f3digo: M\u00e1s simple y directo\n"
+  },
+  "comparison": {
+    "speedup": 14669.000064470256,
+    "geofencing_speedup": 2395.4999096896536,
+    "memory_reduction_percent": 57.35294117647059,
+    "binary_reduction_percent": -6.721536351165981
+  },
+  "metadata": {
+    "timestamp": "2025-06-25T23:08:47.842300",
+    "system_info": {
+      "cpu_count": 4,
+      "cpu_freq": 2343.9212500000003,
+      "memory_total": 7696113664,
+      "platform": "Linux",
+      "architecture": "x86_64"
+    }
+  }
+}

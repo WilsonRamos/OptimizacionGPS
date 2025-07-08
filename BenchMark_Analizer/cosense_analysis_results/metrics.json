@@ -1,0 +1,176 @@
+{
+  "binary_sizes": {
+    "O0": {
+      "generic_file_size": 27824,
+      "optimized_file_size": 27760,
+      "file_size_reduction_percent": 0.23001725129384704,
+      "generic_sections": {
+        "text": 8864,
+        "data": 672,
+        "bss": 8,
+        "total": 9544
+      },
+      "optimized_sections": {
+        "text": 8193,
+        "data": 648,
+        "bss": 8,
+        "total": 8849
+      },
+      "text_reduction_percent": 7.5699458483754505
+    },
+    "O1": {
+      "generic_file_size": 36800,
+      "optimized_file_size": 38072,
+      "file_size_reduction_percent": -3.4565217391304346,
+      "generic_sections": {
+        "text": 7962,
+        "data": 672,
+        "bss": 8,
+        "total": 8642
+      },
+      "optimized_sections": {
+        "text": 6487,
+        "data": 648,
+        "bss": 8,
+        "total": 7143
+      },
+      "text_reduction_percent": 18.525496106505905
+    },
+    "O2": {
+      "generic_file_size": 39592,
+      "optimized_file_size": 39008,
+      "file_size_reduction_percent": 1.4750454637300465,
+      "generic_sections": {
+        "text": 8218,
+        "data": 672,
+        "bss": 8,
+        "total": 8898
+      },
+      "optimized_sections": {
+        "text": 6463,
+        "data": 648,
+        "bss": 8,
+        "total": 7119
+      },
+      "text_reduction_percent": 21.355560963738135
+    },
+    "O3": {
+      "generic_file_size": 66880,
+      "optimized_file_size": 37432,
+      "file_size_reduction_percent": 44.0311004784689,
+      "generic_sections": {
+        "text": 11346,
+        "data": 672,
+        "bss": 8,
+        "total": 12026
+      },
+      "optimized_sections": {
+        "text": 6135,
+        "data": 648,
+        "bss": 8,
+        "total": 6791
+      },
+      "text_reduction_percent": 45.92808038075093
+    }
+  },
+  "performance": {
+    "O0": {
+      "generic_avg_time": 0.061063687006632485,
+      "optimized_avg_time": 0.011891603469848633,
+      "speedup": 5.1350254960536255,
+      "generic_times": [
+        0.07065320014953613,
+        0.05655550956726074,
+        0.055982351303100586
+      ],
+      "optimized_times": [
+        0.012567281723022461,
+        0.011314153671264648,
+        0.011793375015258789
+      ],
+      "generic_ops_per_sec": 9089463.0,
+      "optimized_ops_per_sec": 154380548.0
+    },
+    "O1": {
+      "generic_avg_time": 0.0593872865041097,
+      "optimized_avg_time": 0.010594367980957031,
+      "speedup": 5.605552554985447,
+      "generic_times": [
+        0.0648953914642334,
+        0.05833315849304199,
+        0.05493330955505371
+      ],
+      "optimized_times": [
+        0.012537002563476562,
+        0.012665748596191406,
+        0.006580352783203125
+      ],
+      "generic_ops_per_sec": 10332980.0,
+      "optimized_ops_per_sec": 863930886.0
+    },
+    "O2": {
+      "generic_avg_time": 0.051328182220458984,
+      "optimized_avg_time": 0.007411400477091472,
+      "speedup": 6.925571270789324,
+      "generic_times": [
+        0.0570831298828125,
+        0.04552912712097168,
+        0.05137228965759277
+      ],
+      "optimized_times": [
+        0.007521629333496094,
+        0.006243705749511719,
+        0.008468866348266602
+      ],
+      "generic_ops_per_sec": 9937888.0,
+      "optimized_ops_per_sec": 886917960.0
+    },
+    "O3": {
+      "generic_avg_time": 0.04651769002278646,
+      "optimized_avg_time": 0.00624696413675944,
+      "speedup": 7.44644742700846,
+      "generic_times": [
+        0.0527801513671875,
+        0.0439145565032959,
+        0.04285836219787598
+      ],
+      "optimized_times": [
+        0.0069925785064697266,
+        0.005886077880859375,
+        0.005862236022949219
+      ],
+      "generic_ops_per_sec": 12017786.0,
+      "optimized_ops_per_sec": 200000000000.0
+    }
+  },
+  "assembly": {
+    "generic": {
+      "total_lines": 1281,
+      "instructions": 668,
+      "branches": 33,
+      "comparisons": 23,
+      "function_calls": 69
+    },
+    "optimized": {
+      "total_lines": 736,
+      "instructions": 390,
+      "branches": 15,
+      "comparisons": 11,
+      "function_calls": 57
+    },
+    "instruction_reduction": {
+      "total_lines": 42.54488680718189,
+      "instructions": 41.61676646706587
+    }
+  },
+  "validation": {
+    "output": "\ud83d\udef0\ufe0f  COMPARACI\u00d3N: Geofencing Gen\u00e9rico vs Optimizado\n==================================================\n\ud83d\udcca Usando especificaciones Newton DSL generadas autom\u00e1ticamente\n\ud83d\udccd Datos filtrados: Per\u00fa (Arequipa) - 77 km\u00b2\n\ud83d\udd27 Rangos: lat[-16.410322, -16.305492], lon[-71.607048, -71.530823]\n\n\ud83d\ude80 BENCHMARK: C\u00e1lculo de Distancias\n=====================================\nGen\u00e9rico:      0.0906 segundos (11034970 ops/sec)\nOptimizado:    0.0000 segundos (1000000000000 ops/sec) [90621.0x m\u00e1s r\u00e1pido]\nUltra-opt:     0.0000 segundos (1000000000000 ops/sec) [90621.0x m\u00e1s r\u00e1pido]\n\nPrecisi\u00f3n:\nGen\u00e9rico:      14213.01 metros\nOptimizado:    14226.65 metros (error: 0.10%)\nUltra-opt:     14221.75 metros (error: 0.06%)\n\n\ud83d\udcbe OPTIMIZACI\u00d3N DE MEMORIA\n==========================\nEstructura gen\u00e9rica:  32 bytes\nEstructura optimizada: 12 bytes\nReducci\u00f3n de memoria:  62.5%\n\nGeofence gen\u00e9rica:     24 bytes\nGeofence optimizada:   12 bytes\nReducci\u00f3n de memoria:  50.0%\n\n\ud83c\udf0d SIMULACI\u00d3N DE USO REAL\n=========================\nPunto 1: (-16.410322, -71.607048) 2346m 15km/h\n  \u274c Fuera geofence | \ud83c\udfc3 Movimiento | Zona: Sierra\nPunto 2: (-16.305492, -71.530823) 5357m 45km/h\n  \u274c Fuera geofence | \ud83c\udfc3 Movimiento | Zona: Puna\nPunto 3: (-16.357906, -71.568939) 3500m 0km/h\n  \u2705 Dentro geofence | \u23f8\ufe0f  Est\u00e1tico | Zona: Sierra\nPunto 4: (-16.379999, -71.559998) 3200m 80km/h\n  \u274c Fuera geofence | \ud83c\udfc3 Movimiento | Zona: Sierra\n\n\u2728 CONCLUSIONES:\n- Especificaciones Newton DSL autom\u00e1ticas permiten optimizaciones extremas\n- Rangos micro-espec\u00edficos (11km x 7km) \u2192 optimizaciones agresivas\n- Reducci\u00f3n significativa en tiempo de ejecuci\u00f3n y memoria\n- Precisi\u00f3n mantenida para aplicaciones de geofencing\n",
+    "speedup_reported": {
+      "Optimizado": 90621.0,
+      "opt": 90621.0
+    },
+    "memory_reduction": {
+      "reduction_percent": 62.5
+    }
+  }
+}
