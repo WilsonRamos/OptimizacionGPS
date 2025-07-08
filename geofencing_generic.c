@@ -45,13 +45,17 @@ typedef struct {
 // ====================================================================
 
 /*
- * Validar coordenadas GPS genéricas
+ * Verificamos si las corordenadas estan dentro de los rangos fisicamente posibles
  */
 bool validateGPSCoordinates(generic_latitude lat, generic_longitude lon) {
+    
     if (lat < -90.0 || lat > 90.0) {
         printf("Error: Latitud fuera del rango válido: %.6f\n", lat);
         return false;
     }
+    //Recuerda que 0  grados en el meridiano de greenwich es el punto de referencia
+    // y que la longitud se mide desde el meridiano de greenwich hacia el este
+    // y hacia el oeste, por lo que el rango es de -180 a 180 grados
     if (lon < -180.0 || lon > 180.0) {
         printf("Error: Longitud fuera del rango válido: %.6f\n", lon);
         return false;
@@ -327,10 +331,6 @@ void generic_accuracy_test() {
 
 int main() {
     printf("🌍 GEOFENCING GENÉRICO - SIN OPTIMIZACIONES\n");
-    printf("===========================================\n");
-    printf("📊 Versión que funciona para cualquier ubicación mundial\n");
-    printf("🔧 Con todas las verificaciones y validaciones de seguridad\n\n");
-    
     generic_benchmark();
     generic_memory_usage();
     generic_accuracy_test();
