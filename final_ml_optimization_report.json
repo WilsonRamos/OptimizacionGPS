@@ -1,63 +1,63 @@
 {
-  "timestamp": "2025-06-26T07:55:51.147438",
+  "timestamp": "2025-07-21T22:34:18.330226",
   "ml_analysis": {
-    "timestamp": "2025-06-26T07:55:50.466440",
+    "timestamp": "2025-07-21T22:33:42.875575",
     "code_file": "geofencing_generic.c",
     "newton_file": "peru-gps-specs.newton",
     "code_features": {
-      "trigonometric_count_per_loc": 0.03017241379310345,
+      "trigonometric_count_per_loc": 0.03763440860215054,
       "trigonometric_count": 7,
-      "sqrt_operations_count_per_loc": 0.008620689655172414,
+      "sqrt_operations_count_per_loc": 0.010752688172043012,
       "sqrt_operations_count": 2,
       "power_operations_count_per_loc": 0.0,
       "power_operations_count": 0,
-      "division_operations_count_per_loc": 0.07327586206896551,
-      "division_operations_count": 17,
-      "for_loops_count_per_loc": 0.02586206896551724,
-      "for_loops_count": 6,
+      "division_operations_count_per_loc": 0.053763440860215055,
+      "division_operations_count": 10,
+      "for_loops_count_per_loc": 0.016129032258064516,
+      "for_loops_count": 3,
       "while_loops_count_per_loc": 0.0,
       "while_loops_count": 0,
-      "if_statements_count_per_loc": 0.10344827586206896,
-      "if_statements_count": 24,
+      "if_statements_count_per_loc": 0.13440860215053763,
+      "if_statements_count": 25,
       "switch_statements_count_per_loc": 0.0,
       "switch_statements_count": 0,
       "malloc_calls_count_per_loc": 0.0,
       "malloc_calls_count": 0,
-      "array_access_count_per_loc": 0.0603448275862069,
-      "array_access_count": 14,
-      "pointer_operations_count_per_loc": 0.01293103448275862,
-      "pointer_operations_count": 3,
-      "gps_coordinates_count_per_loc": 0.375,
-      "gps_coordinates_count": 87,
-      "distance_calculations_count_per_loc": 0.06896551724137931,
+      "array_access_count_per_loc": 0.026881720430107527,
+      "array_access_count": 5,
+      "pointer_operations_count_per_loc": 0.005376344086021506,
+      "pointer_operations_count": 1,
+      "gps_coordinates_count_per_loc": 0.40860215053763443,
+      "gps_coordinates_count": 76,
+      "distance_calculations_count_per_loc": 0.08602150537634409,
       "distance_calculations_count": 16,
-      "geofencing_count_per_loc": 0.07327586206896551,
-      "geofencing_count": 17,
-      "double_usage_count_per_loc": 0.10344827586206896,
-      "double_usage_count": 24,
+      "geofencing_count_per_loc": 0.08064516129032258,
+      "geofencing_count": 15,
+      "double_usage_count_per_loc": 0.12365591397849462,
+      "double_usage_count": 23,
       "float_usage_count_per_loc": 0.0,
       "float_usage_count": 0,
-      "int_usage_count_per_loc": 0.05603448275862069,
-      "int_usage_count": 13,
-      "range_checks_count_per_loc": 0.12931034482758622,
-      "range_checks_count": 30,
+      "int_usage_count_per_loc": 0.053763440860215055,
+      "int_usage_count": 10,
+      "range_checks_count_per_loc": 0.15591397849462366,
+      "range_checks_count": 29,
       "null_checks_count_per_loc": 0.0,
       "null_checks_count": 0,
-      "error_handling_count_per_loc": 0.05603448275862069,
+      "error_handling_count_per_loc": 0.06989247311827956,
       "error_handling_count": 13,
-      "cyclomatic_complexity": 31,
+      "cyclomatic_complexity": 29,
       "max_nesting_depth": 4,
-      "function_count_per_loc": 0.0603448275862069,
-      "function_count": 14,
+      "function_count_per_loc": 0.06451612903225806,
+      "function_count": 12,
       "sin_calls": 4,
       "cos_calls": 2,
       "tan_calls": 0,
       "sqrt_calls": 2,
       "pow_calls": 0,
       "atan2_calls": 1,
-      "fabs_calls": 1,
+      "fabs_calls": 0,
       "validation_functions": 7,
-      "lines_of_code": 232
+      "lines_of_code": 186
     },
     "newton_specs": {
       "latitude_min": -16.4103216,
@@ -91,117 +91,121 @@
     "ml_predictions": {
       "use_float_instead_double": {
         "apply": true,
-        "confidence": 0.69,
-        "explanation": "\u00c1rea peque\u00f1a (95 km\u00b2) permite usar float sin p\u00e9rdida significativa de precisi\u00f3n (confianza: 69.0%)"
+        "confidence": 0.55,
+        "explanation": "\u00c1rea peque\u00f1a (95 km\u00b2) permite usar float sin p\u00e9rdida significativa de precisi\u00f3n (confianza: 55.0%)"
       },
       "eliminate_range_checks": {
         "apply": true,
-        "confidence": 0.9975032088565822,
-        "explanation": "Rangos GPS muy espec\u00edficos (lat/lon peque\u00f1os) hacen innecesarias las verificaciones de rango (confianza: 99.8%)"
+        "confidence": 0.830456779180152,
+        "explanation": "Rangos GPS muy espec\u00edficos (lat/lon peque\u00f1os) hacen innecesarias las verificaciones de rango (confianza: 83.0%)"
       },
       "use_euclidean_approx": {
         "apply": true,
-        "confidence": 0.79,
-        "explanation": "Distancias cortas (\u00e1rea: 95 km\u00b2) permiten aproximaci\u00f3n euclidiana con error <0.1% (confianza: 79.0%)"
+        "confidence": 0.81,
+        "explanation": "Distancias cortas (\u00e1rea: 95 km\u00b2) permiten aproximaci\u00f3n euclidiana con error <0.1% (confianza: 81.0%)"
       },
       "eliminate_null_checks": {
         "apply": true,
-        "confidence": 0.728691537259352,
-        "explanation": "C\u00f3digo con complejidad baja (31) permite eliminar verificaciones NULL (confianza: 72.9%)"
+        "confidence": 0.7097030859529261,
+        "explanation": "C\u00f3digo con complejidad baja (29) permite eliminar verificaciones NULL (confianza: 71.0%)"
       },
       "compress_data_types": {
         "apply": true,
-        "confidence": 0.85,
-        "explanation": "Rangos peque\u00f1os permiten tipos de datos comprimidos (int16, float32) (confianza: 85.0%)"
+        "confidence": 0.83,
+        "explanation": "Rangos peque\u00f1os permiten tipos de datos comprimidos (int16, float32) (confianza: 83.0%)"
       },
       "precompute_constants": {
-        "apply": true,
-        "confidence": 0.7190476198876019,
-        "explanation": "Zona geogr\u00e1fica espec\u00edfica permite precalcular constantes trigonom\u00e9tricas (confianza: 71.9%)"
+        "apply": false,
+        "confidence": 0.9088626373185219,
+        "explanation": "Uso global requiere c\u00e1lculo din\u00e1mico de constantes (confianza: 90.9%)"
       }
     },
     "summary": {
       "total_optimizations_evaluated": 6,
-      "optimizations_recommended": 6,
-      "optimizations_rejected": 0,
-      "average_confidence": 0.795873727667256,
-      "recommendation_rate": 1.0
+      "optimizations_recommended": 5,
+      "optimizations_rejected": 1,
+      "average_confidence": 0.7731704170752667,
+      "recommendation_rate": 0.8333333333333334
     }
   },
   "optimization_stats": {
     "total_optimizations": 6,
-    "applied_optimizations": 5,
+    "applied_optimizations": 4,
     "applied_list": [
       "eliminate_range_checks",
       "use_euclidean_approx",
       "eliminate_null_checks",
-      "compress_data_types",
-      "precompute_constants"
+      "compress_data_types"
     ],
-    "avg_confidence": 0.795873727667256
+    "avg_confidence": 0.7731704170752667
   },
   "comparison_results": {
     "generic": {
       "source_file": "geofencing_generic.c",
-      "compilation_time": 0.22560930252075195,
-      "binary_size": 17496,
+      "compilation_time": 14.334049224853516,
+      "binary_size": 277705,
       "execution_performance": {
-        "ops_per_second": 9189487.0,
-        "total_time": 0.0435,
-        "memory_usage": 136.0
+        "ops_per_second": 3149606.0,
+        "total_time": 0.127
       },
       "code_metrics": {
-        "lines_of_code": 292,
+        "lines_of_code": 251,
         "optimization_comments": 0,
-        "double_usage": 25,
+        "double_usage": 23,
         "float_usage": 0,
-        "if_statements": 24,
-        "function_calls": 119
+        "if_statements": 25,
+        "function_calls": 85
       }
     },
-    "manual": {
+    "cosense": {
       "source_file": "geofencing_optimized.c",
-      "compilation_time": 0.1300339698791504,
-      "binary_size": 18672,
+      "compilation_time": 10.136466026306152,
+      "binary_size": 267765,
       "execution_performance": {
-        "ops_per_second": 66666666667.0,
-        "total_time": 0.0,
+        "ops_per_second": 80000000.0,
+        "total_time": 0.005,
         "memory_usage": 58.0
       },
       "code_metrics": {
-        "lines_of_code": 318,
+        "lines_of_code": 344,
         "optimization_comments": 0,
-        "double_usage": 7,
-        "float_usage": 25,
-        "if_statements": 8,
-        "function_calls": 127
+        "double_usage": 8,
+        "float_usage": 28,
+        "if_statements": 11,
+        "function_calls": 133
       }
     },
     "ml_auto": {
       "source_file": "geofencing_ml_optimized.c",
-      "compilation_time": 0.18300509452819824,
-      "binary_size": 19040,
+      "compilation_time": 0.41220760345458984,
+      "binary_size": 275164,
       "execution_performance": {
-        "ops_per_second": 9770634.0,
-        "total_time": 0.0409,
-        "memory_usage": 128.0
+        "ops_per_second": 80000000.0,
+        "total_time": 0.005
       },
       "code_metrics": {
-        "lines_of_code": 311,
-        "optimization_comments": 7,
-        "double_usage": 24,
+        "lines_of_code": 262,
+        "optimization_comments": 6,
+        "double_usage": 22,
         "float_usage": 0,
-        "if_statements": 18,
-        "function_calls": 121
+        "if_statements": 19,
+        "function_calls": 87
       }
     },
     "comparisons": {
-      "manual_vs_generic_speedup": 7254.666845603025,
-      "ml_vs_generic_speedup": 1.0632404180995088,
-      "ml_vs_manual_speedup": 0.0001465595099992672,
-      "manual_size_reduction": -6.721536351165981,
-      "ml_size_reduction": -8.824874256973022
+      "cosense_vs_generic_speedup": 25.40000241300023,
+      "ml_vs_generic_speedup": 25.40000241300023,
+      "ml_vs_cosense_speedup": 1.0,
+      "cosense_size_reduction": 3.5793377865000626,
+      "ml_size_reduction": 0.9149997299292414
     }
   },
-  "conclusion": "PARCIAL: ML autom\u00e1tico alcanza 0.00x vs manual (mejorable)"
+  "generated_visualizations": [
+    "ml_analysis_results\\performance_comparison.png",
+    "ml_analysis_results\\binary_size_comparison.png",
+    "ml_analysis_results\\speedup_comparison.png",
+    "ml_analysis_results\\optimization_statistics.png",
+    "ml_analysis_results\\complete_analysis_dashboard.png"
+  ],
+  "conclusion": "\u00c9XITO: ML autom\u00e1tico equivale a optimizaciones CoSense (1.00x)"
 }
